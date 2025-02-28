@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
-from sklearn.metrics.pairwise import cosine.similarity
+from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extension.text import TfidfVectorizer
 st.set_page_config(page_title="svecw college chatbot",layout="centered")
 if "message" not in st.session_state:
