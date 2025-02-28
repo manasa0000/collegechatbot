@@ -37,7 +37,7 @@ if prompt := st.chat_input("Type your question here..."):
   st.session_state.messages.append({"role": "user", "content" : prompt})
   with st.chat_message("user"):
     st.markdown(prompt)
-  closest_answer=find_closest_question(prompt, vectorizer, question_vectors, df)
+  closest_answer = find_closest_question(prompt, vectorizer, question_vectors, df)
   if closest_answer:
     st.session_state.messages.append({"role": "assistant", "content": closest_answer})
     with st.chat_message("assistant"):
