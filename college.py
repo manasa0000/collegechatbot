@@ -45,7 +45,7 @@ if prompt := st.chat_input("Type your question here..."):
       st.markdown(closest_answer)
   else:
     try:
-      response=model.genrate_content(prompt)
+      response=model.generate_content(prompt)
       st.session_state_messages.append({"role": "assistant", "content": response.text})
       with st.chat_message("assistant"):
         st.markdown(response.text)
